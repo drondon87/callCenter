@@ -10,7 +10,7 @@ package com.almundo.callcenter.exception;
 public class PoolCallFullException extends Exception{
 
 	private static final long serialVersionUID = 1L;
-
+	
 	public PoolCallFullException(String message) {
         super(message);
     }

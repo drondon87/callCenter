@@ -1,9 +1,10 @@
-package com.almundo.callcenter.model;
+package com.almundo.callcenter.thread.model;
 
 import org.apache.log4j.Logger;
 
-import com.almundo.callcenter.generador.CallQueue;
-import com.almundo.callcenter.process.EstatusPersona;
+import com.almundo.callcenter.enums.EstatusEmpleado;
+import com.almundo.callcenter.thread.process.CallHandler;
+import com.almundo.callcenter.thread.process.CallQueue;
 
 /**
  * Director.java
@@ -17,34 +18,18 @@ public class Director extends Persona implements Runnable{
 final static Logger logger = Logger.getLogger(Director.class);
 	
 	private boolean running;
-	private EstatusPersona status;
+	private EstatusEmpleado status;
 	private long callExiration;
 	private int id;
 	
 	public Director(int id){
 		this.id = id;
-		this.status = EstatusPersona.FREE;
+		this.status = EstatusEmpleado.FREE;
 	}
 
 	public void run() {
 		while (running){
-			
-			if(status == EstatusPersona.FREE){
-				
-				Call call = CallQueue.removeCall();
-				if(call!=null){
-					logger.info("Director "+id +" Contestando Llamada ... "+call.getNumero());
-					callExiration = System.currentTimeMillis() + (call.getDuracion() * 40 * 100); 
-					status = EstatusPersona.IN_CALL;
-				}
-				
-			}else{
-				
-				if(System.currentTimeMillis() > callExiration){
-					status = EstatusPersona.FREE;
-					logger.info("Director "+id+" Colgando Llamada ... ");
-				}
-			}
+			CallHandler.executionHandler(status, "Director ", id, callExiration);
 			
 			sleep();
 		}

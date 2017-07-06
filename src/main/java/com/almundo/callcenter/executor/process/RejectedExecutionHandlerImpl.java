@@ -1,7 +1,9 @@
-package com.almundo.callcenter.process;
+package com.almundo.callcenter.executor.process;
 
 import java.util.concurrent.RejectedExecutionHandler;
 import java.util.concurrent.ThreadPoolExecutor;
+
+import org.apache.log4j.Logger;
 
 import com.almundo.callcenter.exception.PoolCallFullException;
 
@@ -14,14 +16,21 @@ import com.almundo.callcenter.exception.PoolCallFullException;
  */
 public class RejectedExecutionHandlerImpl implements RejectedExecutionHandler{
 
+	final static Logger logger = Logger.getLogger(RejectedExecutionHandlerImpl.class);
+	
 	public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
 		
+		logger.debug("Rechazando llamadas");
 		try {
+			
 			throw new PoolCallFullException(r.toString() + " is rejected");
+		
 		} catch (PoolCallFullException e) {
 			e.printStackTrace();
 		}
 		
 	}
+
+	
 
 }

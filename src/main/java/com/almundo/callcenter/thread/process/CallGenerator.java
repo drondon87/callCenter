@@ -1,11 +1,10 @@
-package com.almundo.callcenter.process;
+package com.almundo.callcenter.thread.process;
 
 import java.util.Random;
 
 import org.apache.log4j.Logger;
 
 import com.almundo.callcenter.exception.PoolCallFullException;
-import com.almundo.callcenter.generador.CallQueue;
 
 /**
  * CallGenerator.java
@@ -29,13 +28,17 @@ public class CallGenerator implements Runnable{
 		new Thread(this).start();
 	}
 	
+	/* (non-Javadoc)
+	 * @see java.lang.Runnable#run()
+	 */
 	public void run() {
 		
 		while (running){
 			int duracion = random.nextInt(10);
 			
-			if(duracion>4 & duracion<11){
-				CallQueue.queueCall(duracion);
+			if(duracion>=5 & duracion<=10){
+				//CallQueue.queueCall(duracion,2,2,1);
+				CallQueue.queueCall(duracion,5);
 				sleep();
 			}
 		}
@@ -51,7 +54,6 @@ public class CallGenerator implements Runnable{
 	private void sleep(){
 		try{
 			int sleep = random.nextInt(10);
-			//logger.info("Terminando Llamada "+ sleep+ " segundos");
 			Thread.sleep(sleep * 1000);
 		}catch (InterruptedException e) {
 			e.printStackTrace();

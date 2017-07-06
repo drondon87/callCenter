@@ -1,4 +1,4 @@
-package com.almundo.callcenter.model;
+package com.almundo.callcenter.executor.process;
 
 import java.util.concurrent.ThreadPoolExecutor;
 

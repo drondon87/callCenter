@@ -1,4 +1,4 @@
-package com.almundo.callcenter.model;
+package com.almundo.callcenter.executor.process;
 
 import java.util.Date;
 import java.util.Random;

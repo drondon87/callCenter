@@ -1,4 +1,4 @@
-package com.almundo.callcenter.services;
+package com.almundo.callcenter.executor.process;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
@@ -8,11 +8,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
-
-import com.almundo.callcenter.model.OperadorMonitorThread;
-import com.almundo.callcenter.model.OperadorSimpleThread;
-import com.almundo.callcenter.process.RejectedExecutionHandlerImpl;
-import com.almundo.callcenter.process.WorkerThread;
 
 /**
  * CallServices.java
@@ -38,19 +33,20 @@ public class CallServices {
 	public static void atencionLlamadaOperador(int cantOperadores, int cantLlamadasEntrantes){
 		
 		//Asigna la cantidad de Operadores de Atención de Llamadas
-		ExecutorService executor = Executors.newFixedThreadPool(cantOperadores);
+		ExecutorService executor = Executors.newFixedThreadPool(3);
 		
 		try { 
 			
 			for (int i = 0; i < cantLlamadasEntrantes; i++) {
+				
 				Runnable operador = new OperadorSimpleThread(""+i);
-	            executor.execute(operador);
+				executor.execute(operador);
 	            
 	        }
 			
 	        executor.shutdown();
 	        
-	        if (!executor.awaitTermination(8000, TimeUnit.MILLISECONDS)) {
+	        if (!executor.awaitTermination(3000, TimeUnit.MILLISECONDS)) {
 		        	executor.shutdown();
 		    } 
 		} catch (InterruptedException e) {
@@ -77,7 +73,8 @@ public class CallServices {
 		
 		ThreadFactory threadFactory = Executors.defaultThreadFactory();
 		 
-		ThreadPoolExecutor executorPool = new ThreadPoolExecutor(cantOperadores, cantTotalOpeTrabajando, cantTiempoEjecion, TimeUnit.SECONDS,  new ArrayBlockingQueue<Runnable>(cantLlamadasEspera), threadFactory, rejectionHandler);
+		ThreadPoolExecutor executorPool = new ThreadPoolExecutor(cantOperadores, cantTotalOpeTrabajando, cantTiempoEjecion, 
+				TimeUnit.SECONDS,  new ArrayBlockingQueue<Runnable>(cantLlamadasEspera), threadFactory, rejectionHandler);
 	    
 		  
 		OperadorMonitorThread operadorThread = new OperadorMonitorThread(executorPool,2);
