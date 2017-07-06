@@ -9,7 +9,7 @@ import com.almundo.callcenter.exception.PoolCallFullException;
 
 /**
  * RejectedExecutionHandlerImpl.java
- * @descripcion Manejador que enviará una Excepcion cuando el Pool de Llamadas esté lleno
+ * Manejador que enviará una Excepcion cuando el Pool de Llamadas esté lleno
  * @version 1.0
  * 5 jul. 2017
  * @author Domingo Rondon

@@ -2,6 +2,12 @@ package com.almundo.callcenter.thread.model;
 
 import java.io.Serializable;
 
+/**
+ * Call.java
+ * @version 
+ * 6 jul. 2017
+ * @author Domingo Rondon
+ */
 public class Call implements Serializable{
 	
 	private int duracion;

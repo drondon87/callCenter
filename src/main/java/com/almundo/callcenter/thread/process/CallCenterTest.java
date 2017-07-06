@@ -6,7 +6,7 @@ import com.almundo.callcenter.thread.model.Supervisor;
 
 /**
  * CallCenterTest.java
- * @descripcion Método que ejecuta las pruebas de los Call Center
+ * Método que ejecuta las pruebas de los Call Center
  * @version 
  * 6 jul. 2017
  * @author Domingo Rondon

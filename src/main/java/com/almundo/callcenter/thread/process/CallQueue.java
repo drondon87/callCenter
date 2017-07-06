@@ -8,7 +8,7 @@ import com.almundo.callcenter.thread.model.Call;
 
 /**
  * CallQueue.java
- * @descripcion Clase que maneja las colas de Ejecucion
+ * Clase que maneja las colas de Ejecucion
  * @version 
  * 6 jul. 2017
  * @author Domingo Rondon
@@ -40,9 +40,10 @@ public class CallQueue {
 	}
 
 	/**
-	 * @descripcion Método que Maneja la Cola de llamadas a los Cuales los Operadores
-	 * deben eliminarla
-	 * @param duracion
+	 * Método que Maneja la Cola de llamadas a los Cuales los Operadores
+	 * deben eliminarla 
+	 * @param duracion Duración de Ejecución de la LLamada
+	 * @param cantColaPermitida Cantidad permitida para la Cola de Espera antes de que arroje la exception
 	 * 2 jul. 2017
 	 * @author Domingo Rondon
 	 */
@@ -67,11 +68,11 @@ public class CallQueue {
 	}
 	
 	/**
-	 * @descripcion Manejador de Colas dependiendo de la cantidad de Operadores, Directores y SUpervisores
-	 * @param duracion
-	 * @param cantOperador
-	 * @param cantSupervisor
-	 * @param cantDirector
+	 * Manejador de Colas dependiendo de la cantidad de Operadores, Directores y SUpervisores
+	 * @param duracion Duración de Ejecución de la LLamada
+	 * @param cantOperador Cantidad de Hilos Operadores
+	 * @param cantSupervisor Cantidad de Hilos Supervisores
+	 * @param cantDirector Cantidad de Hilos Directores
 	 * 6 jul. 2017
 	 * @author Domingo Rondon
 	 */
@@ -113,7 +114,7 @@ public class CallQueue {
 	}
 	
 	/**
-	 * @descripcion Método que remueve las llamadas del Pool de LLamadas
+	 * Método que remueve las llamadas del Pool de LLamadas
 	 * @return
 	 * 2 jul. 2017
 	 * @author Domingo Rondon

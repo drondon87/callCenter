@@ -7,6 +7,12 @@ import com.almundo.callcenter.enums.RolEmpleado;
 import com.almundo.callcenter.thread.process.CallHandler;
 import com.almundo.callcenter.thread.process.CallQueue;
 
+/**
+ * Operador.java
+ * @version 
+ * 6 jul. 2017
+ * @author Domingo Rondon
+ */
 public class Operador implements Runnable{
 
 	final static Logger logger = Logger.getLogger(Operador.class);

@@ -8,7 +8,7 @@ import com.almundo.callcenter.exception.PoolCallFullException;
 
 /**
  * CallGenerator.java
- * @descripcion Clase que Genera llamadas Aleatorias
+ * Clase que Genera llamadas Aleatorias
  * @version 
  * 5 jul. 2017
  * @author Domingo Rondon

@@ -15,7 +15,7 @@ import junit.framework.Assert;
 
 /**
  * GeneradorTestCases.java
- * @descripcion Clase que contiene los tests de la aplicación
+ * Clase que contiene los tests de la aplicación
  * @version 1.0
  * 3 jul. 2017
  * @author Domingo Rondon
@@ -23,7 +23,7 @@ import junit.framework.Assert;
 public class GeneradorTestCases {
 
 	/**
-	 * @descripcion Prueba de Ejecución del Generador de LLamadas
+	 * Prueba de Ejecución del Generador de LLamadas
 	 * @throws InterruptedException
 	 * 3 jul. 2017
 	 * @author Domingo Rondon
@@ -34,7 +34,7 @@ public class GeneradorTestCases {
     }
 	
 	/**
-	 * @descripcion Test que evalúa Cual de los Empleados Está libre para atender la llamada
+	 * Test que evalúa Cual de los Empleados Está libre para atender la llamada
 	 * Existen 2 Operadores Libres, 1 Supervisor y 1 Director
 	 * La llamada es tomada por uno de los Operadores
 	 * @throws EmpleadoNoDisponibleException
@@ -77,7 +77,7 @@ public class GeneradorTestCases {
 	}
 	
 	/**
-	 * @descripcion Test que evalúa Cual de los Empleados Está libre para atender la llamada
+	 * Test que evalúa Cual de los Empleados Está libre para atender la llamada
 	 * Existen 2 Operadores No Disponibles, 1 Supervisor y 1 Director
 	 * La llamada es tomada por un Supervisor
 	 * @throws EmpleadoNoDisponibleException
@@ -120,7 +120,7 @@ public class GeneradorTestCases {
 	}
 	
 	/**
-	 * @descripcion Test que evalúa Cual de los Empleados Está libre para atender la llamada
+	 * Test que evalúa Cual de los Empleados Está libre para atender la llamada
 	 * Existen 2 Operadores No Disponibles, 1 Supervisor No Disponible y 1 Director
 	 * La llamada es tomada por un Director
 	 * @throws EmpleadoNoDisponibleException
@@ -163,7 +163,7 @@ public class GeneradorTestCases {
 	}
 	
 	/**
-	 * @descripcion Test que evalúa Cual de los Empleados Está libre para atender la llamada
+	 * Test que evalúa Cual de los Empleados Está libre para atender la llamada
 	 * Existen 2 Operadores No Disponibles, 1 Supervisor No Disponible y 1 Director No disponible
 	 * La llamada no es antendida y arroja una Excepcion
 	 * @throws EmpleadoNoDisponibleException

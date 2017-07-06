@@ -2,7 +2,7 @@ package com.almundo.callcenter.executor.process;
 
 /**
  * ExecutorTestCalls.java
- * @descripcion Clase que Ejecuta las pruebas de los ExecutorService
+ * Clase que Ejecuta las pruebas de los ExecutorService
  * @version 
  * 6 jul. 2017
  * @author Domingo Rondon

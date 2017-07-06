@@ -8,7 +8,7 @@ import com.almundo.callcenter.thread.model.Supervisor;
 
 /**
  * CallHandler.java
- * @descripcion Entidad que maneja el Proceso de llamaad
+ * Entidad que maneja el Proceso de llamaad
  * @version 
  * 6 jul. 2017
  * @author Domingo Rondon
@@ -18,7 +18,7 @@ public class CallHandler {
 	final static Logger logger = Logger.getLogger(Supervisor.class);
 	
 	/**
-	 * @descripcion Metodo que es utilizatio para el manejo de llamada de los empleados
+	 * Metodo que es utilizatio para el manejo de llamada de los empleados
 	 * @param status: Estatus del Empleado en ejecución en caso de esté Libre o Atendiendo llamada
 	 * @param paramId: Identificador de la clase que está llamando ya sea Operador, Supervisor o Director
 	 * @param id: Número de la entidad en Ejecución

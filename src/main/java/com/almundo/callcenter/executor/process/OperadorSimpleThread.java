@@ -1,14 +1,10 @@
 package com.almundo.callcenter.executor.process;
 
-import java.util.Date;
-import java.util.Random;
-import java.util.concurrent.ThreadPoolExecutor;
-
 import org.apache.log4j.Logger;
 
 /**
  * OperadorThread.java
- * @descripcion Hilo que trabajara la atencion de la llamada por parte del Operador
+ * Hilo que trabajara la atencion de la llamada por parte del Operador
  * @version 1.0
  * 5 jul. 2017
  * @author Domingo Rondon
@@ -23,7 +19,7 @@ public class OperadorSimpleThread implements Runnable{
     }
 	
 	/**
-	 * @descripcion Tiempo de Duración de Atención de la LLamada
+	 * Tiempo de Duración de Atención de la LLamada
 	 * 5 jul. 2017
 	 * @author Domingo Rondon
 	 */

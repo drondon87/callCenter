@@ -2,7 +2,7 @@ package com.almundo.callcenter.exception;
 
 /**
  * EmpleadoNoDisponibleException.java
- * @descripcion Excepcion que Existe en caso de que no haya Empleado Disponible
+ * Excepcion que Existe en caso de que no haya Empleado Disponible
  * @version 1.0
  * 3 jul. 2017
  * @author Domingo Rondon

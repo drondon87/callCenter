@@ -2,8 +2,8 @@ package com.almundo.callcenter.executor.model;
 
 /**
  * Empleado.java
- * @descripcion Entidad que contiene los elementos comunes para Supervisor, Operador y Director
- * @version 
+ * Entidad que contiene los elementos comunes para Supervisor, Operador y Director
+ * @version 1.0
  * 3 jul. 2017
  * @author Domingo Rondon
  */

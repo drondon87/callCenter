@@ -8,7 +8,7 @@ import com.almundo.callcenter.executor.model.SupervisorCallCenter;
 
 /**
  * AsignadorLlamada.java
- * @descripcion Interfaz que contiene las Operaciones del CallCenter
+ * Interfaz que contiene las Operaciones del CallCenter
  * @version 1.0
  * 5 jul. 2017
  * @author Domingo Rondon

@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 
 /**
  * CallServices.java
- * @descripcion Servicios de Atención de Llamadas
+ * Servicios de Atención de Llamadas
  * @version 1.0
  * 5 jul. 2017
  * @author Domingo Rondon
@@ -21,12 +21,12 @@ public class CallServices {
 	final static Logger logger = Logger.getLogger(CallServices.class);
 	
 	/**
-	 * @descripcion Metodo que realiza la ejecución de los Operadores
+	 * Metodo que realiza la ejecución de los Operadores
 	 * dependiendo de la Cantidad de Llamadas que se requieran atender
 	 * En caso de que se conozca y se conozca la cantidad de Operadores
 	 * a utilizar
-	 * @param cantOperadores
-	 * @param cantLlamadasEntrantes
+	 * @param cantOperadores Cantidad de Hilos a Crear
+	 * @param cantLlamadasEntrantes Cantidad de Hilos que se estaran ejecutando (Llamadas)
 	 * 5 jul. 2017
 	 * @author Domingo Rondon
 	 */
@@ -58,12 +58,12 @@ public class CallServices {
 	}
 	
 	/**
-	 * @descripcion Metodo que prepara Recibe las llamadas dependiendo de la Cantidad de Operadores Requeridos
-	 * @param cantOperadores
-	 * @param cantTotalOpeTrabajando
-	 * @param cantTiempoEjecion
-	 * @param cantLlamadasEspera
-	 * @param cantLlamadas
+	 * Metodo que prepara Recibe las llamadas dependiendo de la Cantidad de Operadores Requeridos
+	 * @param cantOperadores Cantidad de Hilos a Crear
+	 * @param cantTotalOpeTrabajando Cantidad de Hilos en Ejecución Permitidos
+	 * @param cantTiempoEjecion Tiempo de Ejecución del Hilo Creado
+	 * @param cantLlamadasEspera Cantidad de Hilos en Espera permitidos
+	 * @param cantLlamadas Cantidad de Hilos a lanzar
 	 * 5 jul. 2017
 	 * @author Domingo Rondon
 	 */

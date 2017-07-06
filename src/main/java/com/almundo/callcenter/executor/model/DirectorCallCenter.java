@@ -2,9 +2,9 @@ package com.almundo.callcenter.executor.model;
 
 /**
  * DirectorCallCenter.java
- * @descripcion Entidad que contendrá los atributos y metodos que se utilicen
+ * Entidad que contendrá los atributos y metodos que se utilicen
  * cuando la llamada sea asignada al mismo.
- * @version 
+ * @version 1.0
  * 3 jul. 2017
  * @author Domingo Rondon
  */

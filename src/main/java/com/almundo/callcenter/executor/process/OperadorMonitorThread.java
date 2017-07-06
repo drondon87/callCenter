@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 
 /**
  * OperadorMonitorThread.java
- * @descripcion Clase que Monitorea todas las llamadas Atendidas
+ * Clase que Monitorea todas las llamadas Atendidas
  * @version 
  * 5 jul. 2017
  * @author Domingo Rondon

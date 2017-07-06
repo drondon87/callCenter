@@ -10,6 +10,13 @@ import com.almundo.callcenter.executor.model.Empleado;
 import com.almundo.callcenter.executor.model.OperadorCallCenter;
 import com.almundo.callcenter.executor.model.SupervisorCallCenter;
 
+/**
+ * CallAsignImpl.java
+ * Método que realiza el Procesamiento de la Selección del Empleado que realizará la atención de la llamada
+ * @version 
+ * 6 jul. 2017
+ * @author Domingo Rondon
+ */
 public class CallAsignImpl implements CallAssign{
 
 	private DirectorCallCenter director;
