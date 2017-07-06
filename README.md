@@ -24,3 +24,8 @@ En ella se pueden ejecutar dos métodos que creé utilizando el ExecutorServices, 
 #CLASE CallCenterTest
 
 Se puede ejecutar las pruebas del Sistema, ahorita existen 2 Operadores , 2 Supervisor y 1 Director, El Método CallGenerator() genera llamdas con tiempo aleatorio entre 5 y 10 segundos (se puede visualizar en el Método run de dicha clase) , luego estos 5 hilos (Operador, Supervisor y Director) van tomando las llamadas y retirandolas del pull.
+
+#ExtraPlus
+
+EmpleadoNoDisponibleException: Creada para cuando no existan Empleados Disponible para atender las llamadas.
+PoolCallFullException: Es utilizada cuando el pool de Llamadss en espera se encuentra full

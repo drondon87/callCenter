@@ -38,7 +38,7 @@ public class CallGenerator implements Runnable{
 			
 			if(duracion>=5 & duracion<=10){
 				//CallQueue.queueCall(duracion,2,2,1);
-				CallQueue.queueCall(duracion,5);
+				CallQueue.queueCall(duracion,3);
 				sleep();
 			}
 		}
